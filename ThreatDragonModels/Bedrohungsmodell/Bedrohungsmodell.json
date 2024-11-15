@@ -3,13 +3,23 @@
   "summary": {
     "title": "Bedrohungsmodell",
     "owner": "Oblacky",
-    "description": "aber",
+    "description": "",
     "id": 0
   },
   "detail": {
     "contributors": [],
-    "diagrams": [],
-    "diagramTop": 0,
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "New STRIDE diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.2.0",
+        "cells": []
+      }
+    ],
+    "diagramTop": 1,
     "reviewer": "OBlacky",
     "threatTop": 0
   }
