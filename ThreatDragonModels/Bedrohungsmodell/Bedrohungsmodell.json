@@ -19,8 +19,8 @@
         "cells": [
           {
             "position": {
-              "x": 510,
-              "y": 240
+              "x": 420,
+              "y": 270
             },
             "size": {
               "width": 60,
@@ -35,8 +35,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "13e6f37c-48d8-4a19-bf9c-55653376993c",
             "zIndex": 1,
+            "id": "13e6f37c-48d8-4a19-bf9c-55653376993c",
             "data": {
               "type": "tm.Process",
               "name": "Process",
