@@ -115,8 +115,8 @@
                 "text": "SIEM-System"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -130,12 +130,26 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "ce67b18c-fb0d-43a7-9ba6-0a31a60a9554",
+                  "title": "Spuren verwischen",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Beschreibung: Das SIEM-System protokolliert sicherheitsrelevante Ereignisse. Ein Angreifer könnte versuchen, protokollierte Aktionen zu leugnen oder Spuren zu verwischen.\n\nAngriffsvektor: Löschung oder Manipulation von Log-Einträgen, entweder durch direkten Zugang oder Schwachstellen in der Log-Architektur.\n\nCAPEC-268:The attacker injects, manipulates, deletes, or forges malicious log entries into the log file, in an attempt to mislead an audit of the log file or cover tracks of an attack. Due to either insufficient access controls of the log files or the logging mechanism, the attacker is able to perform such actions. \n\nATT&CK T1070: Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -152,8 +166,8 @@
                 "text": "Export-\nProzess"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -167,12 +181,26 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "b9c1064a-5880-43fd-92b5-6012a7fcd4ac",
+                  "title": "Manipulation der Reports",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Beschreibung: Exportierte Log-Daten könnten von einem Angreifer manipuliert werden.\n\nAngriffsvektor: Zugriff auf die exportierten Dateien oder Schwachstellen in der Export-Schnittstelle, die es erlauben, Daten während der Übertragung oder Speicherung zu verändern.\n\nCAPEC-93: This attack targets the log files of the target host. The attacker injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit, cover traces of attack, or perform other malicious actions. The target host is not properly controlling log access. As a result tainted data is resulting in the log files leading to a failure in accountability, non-repudiation and incident forensics capability. \n\nATT&CK TA0040:  The adversary is trying to manipulate, interrupt, or destroy your systems and data.\n\nD: 8 / R: 7 / E: 6 / A: 8 / DREA: 29",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -189,8 +217,8 @@
                 "text": "2-Faktor-Authe\nntifizierungsdi\nenst"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -204,12 +232,26 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "9f90d067-1972-4f15-9d8e-0bd4801a667d",
+                  "title": "Admin rights",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Beschreibung: Ein Angreifer könnte Schwachstellen im Authentifizierungsdienst ausnutzen, um sich Administrator- oder Service-Zugriffsrechte zu verschaffen.\n\nAngriffsvektor: Ein Angreifer könnte durch Schwachstellen in der Rechteverwaltung (z. B. fehlende Validierung von Rollen) Benutzerrechte erhöhen.\n\nCAPEC-69:This attack targets programs running with elevated privileges. The adversary tries to leverage a vulnerability in the running program and get arbitrary code to execute with elevated privileges. \n\nATT&CK: T1068 , Adversaries may exploit software vulnerabilities in an attempt to elevate privileges.\n",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1102,7 +1144,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Monthly Reports",
+              "name": "Monthly (Signed and Encrypted)Reports",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1122,12 +1164,12 @@
             },
             "vertices": [
               {
-                "x": 220,
-                "y": 160
+                "x": 146,
+                "y": 190
               }
             ],
             "labels": [
-              "Monthly Reports"
+              "Monthly (Signed and Encrypted)Reports"
             ]
           },
           {
@@ -1218,11 +1260,13 @@
                 "text": "Routing-\nInformation-DB"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1236,13 +1280,27 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "68b0ec38-3d03-48e5-915c-2921941ca13a",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Beschreibung: Die Routing-Datenbank könnte unbefugten Zugriff auf gespeicherte routen ermöglichen.\nAngriffsvektor: Ein Angreifer könnte Schwachstellen wie unzureichende Verschlüsselung oder schlecht konfigurierte Berechtigungen ausnutzen, um vertrauliche Informationen auszulesen.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1259,11 +1317,13 @@
                 "text": "Telefonnummer DB"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1277,13 +1337,27 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "b09da12b-30b8-4837-ac90-941eb08e4922",
+                  "title": "Nummer Diebstahl",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Beschreibung: Die Telefonnummer-Datenbank könnte unbefugten Zugriff auf gespeicherte Telefonnummern ermöglichen.\nAngriffsvektor: Ein Angreifer könnte Schwachstellen wie unzureichende Verschlüsselung oder schlecht konfigurierte Berechtigungen ausnutzen, um vertrauliche Informationen auszulesen.\n\nCAPEC-37:An attacker examines a target system to find sensitive data that has been embedded within it. This information can reveal confidential contents, such as account numbers or individual keys/credentials that can be used as an intermediate step in a larger attack. \n\nATT&CK T1005 : Adversaries may search local system sources, such as file systems and configuration files or local databases, to find files of interest and sensitive data prior to Exfiltration.\n\nD: 8 / R: 9 / E: 7 / A: 10 / DREA: 34",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1300,11 +1374,13 @@
                 "text": "Log DB"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1318,13 +1394,27 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "95329f85-13fd-4d84-a40f-d0ad7d06d1d2",
+                  "title": "Log Diebstahl",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Beschreibung: Die Log-Datenbank könnte unbefugten Zugriff auf gespeicherte Log-Daten ermöglichen.\n\nAngriffsvektor: Ein Angreifer könnte Schwachstellen wie unzureichende Verschlüsselung oder schlecht konfigurierte Berechtigungen ausnutzen, um vertrauliche Informationen auszulesen.\n\nCAPEC-37:An attacker examines a target system to find sensitive data that has been embedded within it. This information can reveal confidential contents, such as account numbers or individual keys/credentials that can be used as an intermediate step in a larger attack. \n\nATT&CK T1005 : Adversaries may search local system sources, such as file systems and configuration files or local databases, to find files of interest and sensitive data prior to Exfiltration.\n\nD: 7 / R: 8 / E: 6 / A: 8 / DREA: 29",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ]
             }
           }
         ]
@@ -1332,6 +1422,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "OBlacky",
-    "threatTop": 2
+    "threatTop": 11
   }
 }
