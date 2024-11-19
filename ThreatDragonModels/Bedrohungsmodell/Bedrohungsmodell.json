@@ -115,8 +115,8 @@
                 "text": "SIEM-System"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -130,7 +130,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -139,15 +139,15 @@
                 {
                   "id": "ce67b18c-fb0d-43a7-9ba6-0a31a60a9554",
                   "title": "Spuren verwischen",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Repudiation",
                   "description": "Beschreibung: Das SIEM-System protokolliert sicherheitsrelevante Ereignisse. Ein Angreifer könnte versuchen, protokollierte Aktionen zu leugnen oder Spuren zu verwischen.\n\nAngriffsvektor: Löschung oder Manipulation von Log-Einträgen, entweder durch direkten Zugang oder Schwachstellen in der Log-Architektur.\n\nCAPEC-268:The attacker injects, manipulates, deletes, or forges malicious log entries into the log file, in an attempt to mislead an audit of the log file or cover tracks of an attack. Due to either insufficient access controls of the log files or the logging mechanism, the attacker is able to perform such actions. \n\nATT&CK T1070: Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses\n\nD: 9 / R: 6 / E: 5 / A: 8 / DREA: 28",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Die Reports Verschlüsseln damit der Angreifer nicht weiß wo seine Spuren sind\n\nD3FEND D3-MAN: Authenticating the sender of a message and ensuring message integrity.\nD3FEND D3-MENCR: Encrypting a message body using a cryptographic key.\n\nD: 4 / R: 4 / E: 3 / A: 8 / DREA: 19",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 9,
-                  "score": ""
+                  "score": "19"
                 }
               ]
             }
@@ -166,8 +166,8 @@
                 "text": "Export-\nProzess"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -181,7 +181,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -190,15 +190,15 @@
                 {
                   "id": "b9c1064a-5880-43fd-92b5-6012a7fcd4ac",
                   "title": "Manipulation der Reports",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Beschreibung: Exportierte Log-Daten könnten von einem Angreifer manipuliert werden.\n\nAngriffsvektor: Zugriff auf die exportierten Dateien oder Schwachstellen in der Export-Schnittstelle, die es erlauben, Daten während der Übertragung oder Speicherung zu verändern.\n\nCAPEC-93: This attack targets the log files of the target host. The attacker injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit, cover traces of attack, or perform other malicious actions. The target host is not properly controlling log access. As a result tainted data is resulting in the log files leading to a failure in accountability, non-repudiation and incident forensics capability. \n\nATT&CK TA0040:  The adversary is trying to manipulate, interrupt, or destroy your systems and data.\n\nD: 8 / R: 7 / E: 6 / A: 8 / DREA: 29",
-                  "mitigation": "",
+                  "mitigation": "Die Daten schon vorher verschlüsseln, \n\nD3FEND D3-MENCR: Encrypting a message body using a cryptographic key.\n\nD: 3 / R: 7 / E: 3 / A: 8 / DREA: 21",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 10,
-                  "score": ""
+                  "score": "21"
                 }
               ]
             }
