@@ -818,96 +818,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Überwacht",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "9f04507a-2ba8-4c0d-af60-77c0763dab2d",
-            "source": {
-              "cell": "be8cb3e5-66af-400f-9fbd-60881a67920a"
-            },
-            "target": {
-              "cell": "8f4f9dbb-15e6-4801-9745-40ce34d6d257"
-            },
-            "vertices": [
-              {
-                "x": 515,
-                "y": 470
-              }
-            ],
-            "labels": [
-              "Überwacht"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Überwacht",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "b2ab95df-a88e-46d6-b9ef-325cda82952e",
-            "source": {
-              "cell": "be8cb3e5-66af-400f-9fbd-60881a67920a"
-            },
-            "target": {
-              "cell": "17adf8a8-ba71-4c96-99cf-7609cf9542a4"
-            },
-            "labels": [
-              "Überwacht"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Weekly Reports",
               "description": "",
               "outOfScope": false,
@@ -1073,6 +983,96 @@
             ],
             "labels": [
               "Log Daten"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Überwacht",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "b2ab95df-a88e-46d6-b9ef-325cda82952e",
+            "source": {
+              "cell": "be8cb3e5-66af-400f-9fbd-60881a67920a"
+            },
+            "target": {
+              "cell": "17adf8a8-ba71-4c96-99cf-7609cf9542a4"
+            },
+            "labels": [
+              "Überwacht"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Überwacht",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "9f04507a-2ba8-4c0d-af60-77c0763dab2d",
+            "source": {
+              "cell": "be8cb3e5-66af-400f-9fbd-60881a67920a"
+            },
+            "target": {
+              "cell": "8f4f9dbb-15e6-4801-9745-40ce34d6d257"
+            },
+            "vertices": [
+              {
+                "x": 515,
+                "y": 470
+              }
+            ],
+            "labels": [
+              "Überwacht"
             ]
           },
           {
