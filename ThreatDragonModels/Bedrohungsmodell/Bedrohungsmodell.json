@@ -142,7 +142,7 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Repudiation",
-                  "description": "Beschreibung: Das SIEM-System protokolliert sicherheitsrelevante Ereignisse. Ein Angreifer könnte versuchen, protokollierte Aktionen zu leugnen oder Spuren zu verwischen.\n\nAngriffsvektor: Löschung oder Manipulation von Log-Einträgen, entweder durch direkten Zugang oder Schwachstellen in der Log-Architektur.\n\nCAPEC-268:The attacker injects, manipulates, deletes, or forges malicious log entries into the log file, in an attempt to mislead an audit of the log file or cover tracks of an attack. Due to either insufficient access controls of the log files or the logging mechanism, the attacker is able to perform such actions. \n\nATT&CK T1070: Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses",
+                  "description": "Beschreibung: Das SIEM-System protokolliert sicherheitsrelevante Ereignisse. Ein Angreifer könnte versuchen, protokollierte Aktionen zu leugnen oder Spuren zu verwischen.\n\nAngriffsvektor: Löschung oder Manipulation von Log-Einträgen, entweder durch direkten Zugang oder Schwachstellen in der Log-Architektur.\n\nCAPEC-268:The attacker injects, manipulates, deletes, or forges malicious log entries into the log file, in an attempt to mislead an audit of the log file or cover tracks of an attack. Due to either insufficient access controls of the log files or the logging mechanism, the attacker is able to perform such actions. \n\nATT&CK T1070: Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses\n\nD: 9 / R: 6 / E: 5 / A: 8 / DREA: 28",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -244,7 +244,7 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Elevation of privilege",
-                  "description": "Beschreibung: Ein Angreifer könnte Schwachstellen im Authentifizierungsdienst ausnutzen, um sich Administrator- oder Service-Zugriffsrechte zu verschaffen.\n\nAngriffsvektor: Ein Angreifer könnte durch Schwachstellen in der Rechteverwaltung (z. B. fehlende Validierung von Rollen) Benutzerrechte erhöhen.\n\nCAPEC-69:This attack targets programs running with elevated privileges. The adversary tries to leverage a vulnerability in the running program and get arbitrary code to execute with elevated privileges. \n\nATT&CK: T1068 , Adversaries may exploit software vulnerabilities in an attempt to elevate privileges.\n",
+                  "description": "Beschreibung: Ein Angreifer könnte Schwachstellen im Authentifizierungsdienst ausnutzen, um sich Administrator- oder Service-Zugriffsrechte zu verschaffen.\n\nAngriffsvektor: Ein Angreifer könnte durch Schwachstellen in der Rechteverwaltung (z. B. fehlende Validierung von Rollen) Benutzerrechte erhöhen.\n\nCAPEC-69:This attack targets programs running with elevated privileges. The adversary tries to leverage a vulnerability in the running program and get arbitrary code to execute with elevated privileges. \n\nATT&CK: T1068 , Adversaries may exploit software vulnerabilities in an attempt to elevate privileges.\n\n\nD: 9 / R: 7 / E: 6 / A: 10 / DREA: 32",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -1260,13 +1260,11 @@
                 "text": "Routing-\nInformation-DB"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1280,7 +1278,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
@@ -1290,10 +1288,10 @@
                 {
                   "id": "68b0ec38-3d03-48e5-915c-2921941ca13a",
                   "title": "New STRIDE threat",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Beschreibung: Die Routing-Datenbank könnte unbefugten Zugriff auf gespeicherte routen ermöglichen.\nAngriffsvektor: Ein Angreifer könnte Schwachstellen wie unzureichende Verschlüsselung oder schlecht konfigurierte Berechtigungen ausnutzen, um vertrauliche Informationen auszulesen.",
+                  "description": "Beschreibung: Die Routing-Datenbank könnte unbefugten Zugriff auf gespeicherte routen ermöglichen.\nAngriffsvektor: Ein Angreifer könnte Schwachstellen wie unzureichende Verschlüsselung oder schlecht konfigurierte Berechtigungen ausnutzen, um vertrauliche Informationen auszulesen.\n\nCAPEC-37:An attacker examines a target system to find sensitive data that has been embedded within it. This information can reveal confidential contents, such as account numbers or individual keys/credentials that can be used as an intermediate step in a larger attack. \n\nATT&CK T1005 : Adversaries may search local system sources, such as file systems and configuration files or local databases, to find files of interest and sensitive data prior to Exfiltration.\n\nD: 8 / R: 6 / E: 7 / A: 7 / DREA: 28",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
