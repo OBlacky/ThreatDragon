@@ -194,7 +194,7 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Beschreibung: Exportierte Log-Daten könnten von einem Angreifer manipuliert werden.\n\nAngriffsvektor: Zugriff auf die exportierten Dateien oder Schwachstellen in der Export-Schnittstelle, die es erlauben, Daten während der Übertragung oder Speicherung zu verändern.\n\nCAPEC-93: This attack targets the log files of the target host. The attacker injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit, cover traces of attack, or perform other malicious actions. The target host is not properly controlling log access. As a result tainted data is resulting in the log files leading to a failure in accountability, non-repudiation and incident forensics capability. \n\nATT&CK TA0040:  The adversary is trying to manipulate, interrupt, or destroy your systems and data.\n\nD: 8 / R: 7 / E: 6 / A: 8 / DREA: 29",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 10,
@@ -217,8 +217,8 @@
                 "text": "2-Faktor-Authe\nntifizierungsdi\nenst"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -232,7 +232,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -241,15 +241,15 @@
                 {
                   "id": "9f90d067-1972-4f15-9d8e-0bd4801a667d",
                   "title": "Admin rights",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Elevation of privilege",
                   "description": "Beschreibung: Ein Angreifer könnte Schwachstellen im Authentifizierungsdienst ausnutzen, um sich Administrator- oder Service-Zugriffsrechte zu verschaffen.\n\nAngriffsvektor: Ein Angreifer könnte durch Schwachstellen in der Rechteverwaltung (z. B. fehlende Validierung von Rollen) Benutzerrechte erhöhen.\n\nCAPEC-69:This attack targets programs running with elevated privileges. The adversary tries to leverage a vulnerability in the running program and get arbitrary code to execute with elevated privileges. \n\nATT&CK: T1068 , Adversaries may exploit software vulnerabilities in an attempt to elevate privileges.\n\n\nD: 9 / R: 7 / E: 6 / A: 10 / DREA: 32",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Anmelde Vorausetzungen Verbessern um schwerer angreifbar zusein wie z.b eine starke Passwort Struktur angeben und Eine One time Password authentifikations implementieren.\n\nD3FEND D3-SPP: Modifying system configuration to increase password strength.\nD3FEND D3-OTP: One-Time-Passwords for authentification.\n\nD:9 / R:3 / E: 6 / A: 10 / DREA: 28",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 8,
-                  "score": ""
+                  "score": "28"
                 }
               ]
             }
@@ -378,7 +378,7 @@
                   "id": "fd900032-51e1-4ae3-9d8c-3912cce59510",
                   "title": "Spoofing von Kundendaten",
                   "status": "Mitigated",
-                  "severity": "Medium",
+                  "severity": "Low",
                   "type": "Spoofing",
                   "description": "Angreifer kann sich als \"legitimer\" Kunde ausgeben, um an kritische Daten / Dienste zu gelangen zu denen er eigentlich keinen Zugriff haben dürfte (Social Engineering beim Kundendienst).\n\nCAPEC ID: 148: Content Spoofing: An adversary modifies content to make it contain something other than what the original content producer intended while keeping the apparent source of the content unchanged.\nAtt&ck: T1557 (Adversary-in-the-Middle)\n\nD: 9 / R: 8 / E: 5 / A: 4 / DREA: 26",
                   "mitigation": "Personal schulen, Kritische Kundendaten als solche für Mitarbeiter in der Support-Software markieren, um Irrtümer zu vermeiden. \n\nDefend Matrix: D3-NTCD: Network Traffic Community Deviation\nASVS: 1.8.1 : Verify that all sensitive data is identified and classified into protection levels.\n\nD: 4 / R: 4 / E: 2 / A: 4 / Neuer DREA: 14",
@@ -1289,14 +1289,14 @@
                   "id": "68b0ec38-3d03-48e5-915c-2921941ca13a",
                   "title": "New STRIDE threat",
                   "status": "Mitigated",
-                  "severity": "Medium",
+                  "severity": "Low",
                   "type": "Information disclosure",
                   "description": "Beschreibung: Die Routing-Datenbank könnte unbefugten Zugriff auf gespeicherte routen ermöglichen.\nAngriffsvektor: Ein Angreifer könnte Schwachstellen wie unzureichende Verschlüsselung oder schlecht konfigurierte Berechtigungen ausnutzen, um vertrauliche Informationen auszulesen.\n\nCAPEC-37:An attacker examines a target system to find sensitive data that has been embedded within it. This information can reveal confidential contents, such as account numbers or individual keys/credentials that can be used as an intermediate step in a larger attack. \n\nATT&CK T1005 : Adversaries may search local system sources, such as file systems and configuration files or local databases, to find files of interest and sensitive data prior to Exfiltration.\n\nD: 8 / R: 6 / E: 7 / A: 7 / DREA: 28",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Daten in der DB verschlüsseln damit der Angreifer sie nicht entziffern kann und damit er die nicht löschen kann Immer ein Backup erstellen.\n\nCWE311 (6.1.1) Verify that regulated private data is stored encrypted while at rest, such as\nPersonally Identifiable Information (PII), sensitive personal information, or\ndata assessed likely to be subject to EU's GDPR.\n\n\nD: 5 / R: 2 / E:3  / A: 2 / DREA: 12",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 11,
-                  "score": ""
+                  "score": "12"
                 }
               ]
             }
@@ -1315,13 +1315,11 @@
                 "text": "Telefonnummer DB"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1335,7 +1333,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
@@ -1345,15 +1343,15 @@
                 {
                   "id": "b09da12b-30b8-4837-ac90-941eb08e4922",
                   "title": "Nummer Diebstahl",
-                  "status": "Open",
-                  "severity": "Medium",
+                  "status": "Mitigated",
+                  "severity": "Low",
                   "type": "Information disclosure",
                   "description": "Beschreibung: Die Telefonnummer-Datenbank könnte unbefugten Zugriff auf gespeicherte Telefonnummern ermöglichen.\nAngriffsvektor: Ein Angreifer könnte Schwachstellen wie unzureichende Verschlüsselung oder schlecht konfigurierte Berechtigungen ausnutzen, um vertrauliche Informationen auszulesen.\n\nCAPEC-37:An attacker examines a target system to find sensitive data that has been embedded within it. This information can reveal confidential contents, such as account numbers or individual keys/credentials that can be used as an intermediate step in a larger attack. \n\nATT&CK T1005 : Adversaries may search local system sources, such as file systems and configuration files or local databases, to find files of interest and sensitive data prior to Exfiltration.\n\nD: 8 / R: 9 / E: 7 / A: 10 / DREA: 34",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Daten in der DB verschlüsseln damit der Angreifer sie nicht entziffern kann und damit er die nicht löschen kann Immer ein Backup erstellen.\n\nCWE311 (6.1.1) Verify that regulated private data is stored encrypted while at rest, such as\nPersonally Identifiable Information (PII), sensitive personal information, or\ndata assessed likely to be subject to EU's GDPR.\n\n\nD: 5 / R: 2 / E:3  / A: 2 / DREA: 12",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 7,
-                  "score": ""
+                  "score": "12"
                 }
               ]
             }
@@ -1372,13 +1370,11 @@
                 "text": "Log DB"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1392,7 +1388,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
@@ -1402,15 +1398,15 @@
                 {
                   "id": "95329f85-13fd-4d84-a40f-d0ad7d06d1d2",
                   "title": "Log Diebstahl",
-                  "status": "Open",
-                  "severity": "Medium",
+                  "status": "Mitigated",
+                  "severity": "Low",
                   "type": "Information disclosure",
                   "description": "Beschreibung: Die Log-Datenbank könnte unbefugten Zugriff auf gespeicherte Log-Daten ermöglichen.\n\nAngriffsvektor: Ein Angreifer könnte Schwachstellen wie unzureichende Verschlüsselung oder schlecht konfigurierte Berechtigungen ausnutzen, um vertrauliche Informationen auszulesen.\n\nCAPEC-37:An attacker examines a target system to find sensitive data that has been embedded within it. This information can reveal confidential contents, such as account numbers or individual keys/credentials that can be used as an intermediate step in a larger attack. \n\nATT&CK T1005 : Adversaries may search local system sources, such as file systems and configuration files or local databases, to find files of interest and sensitive data prior to Exfiltration.\n\nD: 7 / R: 8 / E: 6 / A: 8 / DREA: 29",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Daten in der DB verschlüsseln damit der Angreifer sie nicht entziffern kann und damit er die nicht löschen kann Immer ein Backup erstellen.\n\nCWE311 (6.1.1) Verify that regulated private data is stored encrypted while at rest, such as\nPersonally Identifiable Information (PII), sensitive personal information, or\ndata assessed likely to be subject to EU's GDPR.\n\nMASVS-STORAGE-1: Apps handle sensitive data coming from many sources such as the user, the backend, system services or other apps on the device and usually need to store it locally. The storage locations may be private to the app (e.g. its internal storage) or be public and therefore accessible by the user or other installed apps (e.g. public folders such as Downloads). This control ensures that any sensitive data that is intentionally stored by the app is properly protected independently of the target location.\n\n\nD: 5 / R: 2 / E:3  / A: 2 / DREA: 12",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 6,
-                  "score": ""
+                  "score": "12"
                 }
               ]
             }
