@@ -115,8 +115,8 @@
                 "text": "SIEM-System"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -130,7 +130,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -139,7 +139,7 @@
                 {
                   "id": "ce67b18c-fb0d-43a7-9ba6-0a31a60a9554",
                   "title": "Spuren verwischen",
-                  "status": "Mitigated",
+                  "status": "Open",
                   "severity": "Medium",
                   "type": "Repudiation",
                   "description": "Beschreibung: Das SIEM-System protokolliert sicherheitsrelevante Ereignisse. Ein Angreifer könnte versuchen, protokollierte Aktionen zu leugnen oder Spuren zu verwischen.\n\nAngriffsvektor: Löschung oder Manipulation von Log-Einträgen, entweder durch direkten Zugang oder Schwachstellen in der Log-Architektur.\n\nCAPEC-268:The attacker injects, manipulates, deletes, or forges malicious log entries into the log file, in an attempt to mislead an audit of the log file or cover tracks of an attack. Due to either insufficient access controls of the log files or the logging mechanism, the attacker is able to perform such actions. \n\nATT&CK T1070: Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses\n\nD: 9 / R: 6 / E: 5 / A: 8 / DREA: 28",
@@ -163,7 +163,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Export-\nProzess"
+                "text": "Export"
               },
               "body": {
                 "stroke": "#333333",
@@ -177,7 +177,7 @@
             "id": "ec955a7b-b9ce-4cb8-a4ba-eb2bb604611d",
             "data": {
               "type": "tm.Process",
-              "name": "Export-\nProzess",
+              "name": "Export",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -193,12 +193,12 @@
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Tampering",
-                  "description": "Beschreibung: Exportierte Log-Daten könnten von einem Angreifer abgefangen und manipuliert werden.\n\nAngriffsvektor: Zugriff auf die exportierten Dateien oder Schwachstellen in der Export-Schnittstelle, die es erlauben, Daten während der Übertragung oder Speicherung zu verändern.\n\nCAPEC-93: This attack targets the log files of the target host. The attacker injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit, cover traces of attack, or perform other malicious actions. The target host is not properly controlling log access. As a result tainted data is resulting in the log files leading to a failure in accountability, non-repudiation and incident forensics capability. \n\nATT&CK TA0040:  The adversary is trying to manipulate, interrupt, or destroy your systems and data.\n\nD: 8 / R: 7 / E: 6 / A: 8 / DREA: 29",
-                  "mitigation": "E-Mail Authentifizierung an den Empfänger.\nBackups-Speichern.\n\nD3FEND D3-MAN: Authenticating the sender of a message and ensuring message integrity.\nD3FEND-D3-EAL: Using a digital signature to authenticate a file before opening.\n\nD: 3 / R: 7 / E: 3 / A: 8 / DREA: 21",
+                  "description": "Beschreibung: Exportierte Log-Daten könnten von einem Angreifer abgefangen und manipuliert werden.\n\nAngriffsvektor: Zugriff auf die exportierten Dateien oder Schwachstellen in der Export-Schnittstelle, die es erlauben, Daten während der Übertragung oder Speicherung zu verändern.\n\nCAPEC-93: This attack targets the log files of the target host. The attacker injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit, cover traces of attack, or perform other malicious actions. The target host is not properly controlling log access. As a result tainted data is resulting in the log files leading to a failure in accountability, non-repudiation and incident forensics capability. \n\nATT&CK TA0040:  The adversary is trying to manipulate, interrupt, or destroy your systems and data.\n\nD: 8 / R: 7 / E: 8 / A: 3 / DREA: 26",
+                  "mitigation": "E-Mails Signieren.\nBackups-Speichern.\n\nD3FEND D3-MAN: Authenticating the sender of a message and ensuring message integrity.\nD3FEND-D3-EAL: Using a digital signature to authenticate a file before opening.\n\nD: 5 / R: 5 / E: 5 / A: 3 / DREA: 18",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 10,
-                  "score": "21"
+                  "score": "18"
                 }
               ]
             }
@@ -353,8 +353,8 @@
                 "text": "Allsecure Mobile \nPhone OTT Service"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -368,7 +368,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -377,7 +377,7 @@
                 {
                   "id": "fd900032-51e1-4ae3-9d8c-3912cce59510",
                   "title": "Spoofing von Kundendaten",
-                  "status": "Mitigated",
+                  "status": "Open",
                   "severity": "Low",
                   "type": "Spoofing",
                   "description": "Angreifer kann sich als \"legitimer\" Kunde ausgeben, um an kritische Daten / Dienste zu gelangen zu denen er eigentlich keinen Zugriff haben dürfte (Social Engineering beim Kundendienst).\n\nCAPEC ID: 148: Content Spoofing: An adversary modifies content to make it contain something other than what the original content producer intended while keeping the apparent source of the content unchanged.\nAtt&ck: T1557 (Adversary-in-the-Middle)\n\nD: 9 / R: 8 / E: 5 / A: 4 / DREA: 26",
@@ -1248,7 +1248,7 @@
           },
           {
             "position": {
-              "x": 918,
+              "x": 920,
               "y": 210
             },
             "size": {
@@ -1287,7 +1287,7 @@
               "threats": [
                 {
                   "id": "68b0ec38-3d03-48e5-915c-2921941ca13a",
-                  "title": "New STRIDE threat",
+                  "title": "Informations Diebstahl",
                   "status": "Mitigated",
                   "severity": "Low",
                   "type": "Information disclosure",
