@@ -193,8 +193,8 @@
                   "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Tampering",
-                  "description": "Beschreibung: Exportierte Log-Daten könnten von einem Angreifer manipuliert werden.\n\nAngriffsvektor: Zugriff auf die exportierten Dateien oder Schwachstellen in der Export-Schnittstelle, die es erlauben, Daten während der Übertragung oder Speicherung zu verändern.\n\nCAPEC-93: This attack targets the log files of the target host. The attacker injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit, cover traces of attack, or perform other malicious actions. The target host is not properly controlling log access. As a result tainted data is resulting in the log files leading to a failure in accountability, non-repudiation and incident forensics capability. \n\nATT&CK TA0040:  The adversary is trying to manipulate, interrupt, or destroy your systems and data.\n\nD: 8 / R: 7 / E: 6 / A: 8 / DREA: 29",
-                  "mitigation": "Die Daten schon vorher verschlüsseln, \n\nD3FEND D3-MENCR: Encrypting a message body using a cryptographic key.\n\nD: 3 / R: 7 / E: 3 / A: 8 / DREA: 21",
+                  "description": "Beschreibung: Exportierte Log-Daten könnten von einem Angreifer abgefangen und manipuliert werden.\n\nAngriffsvektor: Zugriff auf die exportierten Dateien oder Schwachstellen in der Export-Schnittstelle, die es erlauben, Daten während der Übertragung oder Speicherung zu verändern.\n\nCAPEC-93: This attack targets the log files of the target host. The attacker injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit, cover traces of attack, or perform other malicious actions. The target host is not properly controlling log access. As a result tainted data is resulting in the log files leading to a failure in accountability, non-repudiation and incident forensics capability. \n\nATT&CK TA0040:  The adversary is trying to manipulate, interrupt, or destroy your systems and data.\n\nD: 8 / R: 7 / E: 6 / A: 8 / DREA: 29",
+                  "mitigation": "E-Mail Authentifizierung an den Empfänger.\nBackups-Speichern.\n\nD3FEND D3-MAN: Authenticating the sender of a message and ensuring message integrity.\nD3FEND-D3-EAL: Using a digital signature to authenticate a file before opening.\n\nD: 3 / R: 7 / E: 3 / A: 8 / DREA: 21",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 10,
@@ -242,14 +242,14 @@
                   "id": "9f90d067-1972-4f15-9d8e-0bd4801a667d",
                   "title": "Admin rights",
                   "status": "Mitigated",
-                  "severity": "Medium",
+                  "severity": "High",
                   "type": "Elevation of privilege",
-                  "description": "Beschreibung: Ein Angreifer könnte Schwachstellen im Authentifizierungsdienst ausnutzen, um sich Administrator- oder Service-Zugriffsrechte zu verschaffen.\n\nAngriffsvektor: Ein Angreifer könnte durch Schwachstellen in der Rechteverwaltung (z. B. fehlende Validierung von Rollen) Benutzerrechte erhöhen.\n\nCAPEC-69:This attack targets programs running with elevated privileges. The adversary tries to leverage a vulnerability in the running program and get arbitrary code to execute with elevated privileges. \n\nATT&CK: T1068 , Adversaries may exploit software vulnerabilities in an attempt to elevate privileges.\n\n\nD: 9 / R: 7 / E: 6 / A: 10 / DREA: 32",
-                  "mitigation": "Anmelde Vorausetzungen Verbessern um schwerer angreifbar zusein wie z.b eine starke Passwort Struktur angeben und Eine One time Password authentifikations implementieren.\n\nD3FEND D3-SPP: Modifying system configuration to increase password strength.\nD3FEND D3-OTP: One-Time-Passwords for authentification.\n\nD:9 / R:3 / E: 6 / A: 10 / DREA: 28",
+                  "description": "Beschreibung: Ein Angreifer könnte Schwachstellen im Authentifizierungsdienst ausnutzen, um sich Administrator- oder Service-Zugriffsrechte zu verschaffen.\n\nAngriffsvektor: Ein Angreifer könnte durch Schwachstellen in der Rechteverwaltung (z. B. fehlende Validierung von Rollen) Benutzerrechte erhöhen.\n\nCAPEC-69:This attack targets programs running with elevated privileges. The adversary tries to leverage a vulnerability in the running program and get arbitrary code to execute with elevated privileges. \n\nATT&CK: T1068 , Adversaries may exploit software vulnerabilities in an attempt to elevate privileges.\n\n\nD: 9 / R: 7 / E: 8 / A: 10 / DREA: 34",
+                  "mitigation": "Bestimmte Anzahl an Admins festlegen und immer mit der Datenbank vergleichen.\nWenn eine Änderung einer Rolle wahrgenommen wird Account Speeren bis ein Admin sich das anschaut.\n\nD3FEND-D3-UAP: Restricting a user account's access to resources.\n\nD:9 / R:5 / E: 8 / A: 10 / DREA: 32",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 8,
-                  "score": "28"
+                  "score": "32"
                 }
               ]
             }
@@ -748,15 +748,15 @@
               "threats": []
             },
             "id": "e3afa957-909b-4db2-a5ed-4613e07efd90",
+            "labels": [
+              "Telefonnummer+Nachricht"
+            ],
             "source": {
               "cell": "17adf8a8-ba71-4c96-99cf-7609cf9542a4"
             },
             "target": {
               "cell": "f19cc1a7-495d-4f0d-b140-1bfa34dc6ecf"
             },
-            "labels": [
-              "Telefonnummer+Nachricht"
-            ],
             "vertices": [
               {
                 "x": 640,
@@ -796,6 +796,9 @@
               "threats": []
             },
             "id": "87ba56a1-81be-44df-b2d3-8e2ef0434ee4",
+            "labels": [
+              "Antwort"
+            ],
             "source": {
               "cell": "f19cc1a7-495d-4f0d-b140-1bfa34dc6ecf"
             },
@@ -807,9 +810,6 @@
                 "x": 610,
                 "y": 590
               }
-            ],
-            "labels": [
-              "Antwort"
             ]
           },
           {
@@ -844,15 +844,15 @@
               "threats": []
             },
             "id": "31309121-9fce-42c3-8e1e-93c8089f5d18",
+            "labels": [
+              "Telefonnummer,OTT"
+            ],
             "source": {
               "cell": "17adf8a8-ba71-4c96-99cf-7609cf9542a4"
             },
             "target": {
               "cell": "8f4f9dbb-15e6-4801-9745-40ce34d6d257"
-            },
-            "labels": [
-              "Telefonnummer,OTT"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -886,15 +886,15 @@
               "threats": []
             },
             "id": "913a0f21-393b-4e82-bd2a-e52ac291a351",
+            "labels": [
+              "Nummer Auslesen"
+            ],
             "source": {
               "cell": "8f4f9dbb-15e6-4801-9745-40ce34d6d257"
             },
             "target": {
               "cell": "07cc375c-9eda-4a13-9144-5552b4234ec4"
-            },
-            "labels": [
-              "Nummer Auslesen"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -928,6 +928,9 @@
               "threats": []
             },
             "id": "8e2d6f62-255e-49a5-bc3d-9bc05e26638d",
+            "labels": [
+              "Log Daten"
+            ],
             "source": {
               "cell": "17adf8a8-ba71-4c96-99cf-7609cf9542a4"
             },
@@ -939,9 +942,6 @@
                 "x": 210,
                 "y": 420
               }
-            ],
-            "labels": [
-              "Log Daten"
             ]
           },
           {
@@ -976,15 +976,15 @@
               "threats": []
             },
             "id": "b2ab95df-a88e-46d6-b9ef-325cda82952e",
+            "labels": [
+              "Überwacht"
+            ],
             "source": {
               "cell": "be8cb3e5-66af-400f-9fbd-60881a67920a"
             },
             "target": {
               "cell": "17adf8a8-ba71-4c96-99cf-7609cf9542a4"
-            },
-            "labels": [
-              "Überwacht"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1018,6 +1018,9 @@
               "threats": []
             },
             "id": "9f04507a-2ba8-4c0d-af60-77c0763dab2d",
+            "labels": [
+              "Überwacht"
+            ],
             "source": {
               "cell": "be8cb3e5-66af-400f-9fbd-60881a67920a"
             },
@@ -1029,9 +1032,6 @@
                 "x": 515,
                 "y": 470
               }
-            ],
-            "labels": [
-              "Überwacht"
             ]
           },
           {
@@ -1066,15 +1066,15 @@
               "threats": []
             },
             "id": "d002de79-5b54-4c01-afcd-29154c63b389",
+            "labels": [
+              "Log"
+            ],
             "source": {
               "cell": "17adf8a8-ba71-4c96-99cf-7609cf9542a4"
             },
             "target": {
               "cell": "a548c708-68cb-4817-a1b9-fd7b33942c29"
-            },
-            "labels": [
-              "Log"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1108,6 +1108,9 @@
               "threats": []
             },
             "id": "d11e6a00-8a54-48fe-b40d-0590f65b617d",
+            "labels": [
+              "Weekly Reports"
+            ],
             "source": {
               "cell": "be8cb3e5-66af-400f-9fbd-60881a67920a"
             },
@@ -1119,9 +1122,6 @@
                 "x": 515,
                 "y": 160
               }
-            ],
-            "labels": [
-              "Weekly Reports"
             ]
           },
           {
@@ -1156,6 +1156,9 @@
               "threats": []
             },
             "id": "e0bb0dff-61b2-4a6b-9196-6092c4b2fd78",
+            "labels": [
+              "Monthly (Signed and Encrypted)Reports"
+            ],
             "source": {
               "cell": "ec955a7b-b9ce-4cb8-a4ba-eb2bb604611d"
             },
@@ -1167,9 +1170,6 @@
                 "x": 146,
                 "y": 190
               }
-            ],
-            "labels": [
-              "Monthly (Signed and Encrypted)Reports"
             ]
           },
           {
@@ -1325,8 +1325,8 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "07cc375c-9eda-4a13-9144-5552b4234ec4",
             "zIndex": 14,
+            "id": "07cc375c-9eda-4a13-9144-5552b4234ec4",
             "data": {
               "type": "tm.Store",
               "name": "Telefonnummer DB",
@@ -1380,8 +1380,8 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "a548c708-68cb-4817-a1b9-fd7b33942c29",
             "zIndex": 15,
+            "id": "a548c708-68cb-4817-a1b9-fd7b33942c29",
             "data": {
               "type": "tm.Store",
               "name": "Log DB",
